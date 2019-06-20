@@ -1,0 +1,14 @@
+html
+  head
+    title Prueba Form
+  body
+    form(action= "/recibe",method = "POST")
+      div
+        label(for = "dice") Dice:
+        input(name = "dice"  value= "Hola")
+      br
+      div
+        label(for = "para") Para:
+        input(name = "para" value="Para")
+      br
+      button(type = "submit") Enviar

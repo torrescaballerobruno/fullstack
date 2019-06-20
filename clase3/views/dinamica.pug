@@ -1,0 +1,14 @@
+html
+  head
+    title=nombre
+  body
+    h1=nombre
+    a(href = url) URL
+    h1 hola #{nombre}
+
+    if(usr)
+      h1 Bienvenido #{usr.nombre}
+
+    br.
+    br.
+    include ./footer
