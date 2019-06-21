@@ -1,0 +1,10 @@
+html
+  head
+    title Persona
+  body
+    if(type == "error")
+      h3(style ="color:red")  #{mensaje}
+    else
+      h3.
+        Nueva Persona, Nombre: #{persona.nombre}, Edad: #{persona.edad}
+        y Nacionalidad: #{persona.nacionalidad}
