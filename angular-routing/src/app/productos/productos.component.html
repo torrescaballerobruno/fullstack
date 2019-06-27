@@ -1,0 +1,23 @@
+<p>Estos son los productos</p>
+<p>Nombre:{{nombre}}</p>
+<p>Edad:{{edad}}</p>
+<p *ngIf ="edad>18;else menor">Es mayor de edad </p>
+<ng-template #menor>Es menor de edad
+</ng-template>
+<table>
+    <tr>
+        <th>Sueldos</th>
+    </tr>
+    <tr *ngFor="let sueldo of sueldos">
+        <td>{{sueldo}}</td>
+    </tr>
+</table>
+<div class="container" [ngSwitch]="miVar">
+    <div *ngSwitchCase ="'A'">Esta es la variable A</div>
+    <div *ngSwitchCase ="'B'">Esta es la variable B</div>
+    <div *ngSwitchCase ="'C'">Esta es la variable C</div>
+    <div *ngSwitchDefault>Esta es otra variable</div>
+</div>
+
+<div [ngStyle]="{color:'green'}">Hola soy rosa </div>
+<div [ngClass]="{borde:true}"></div>

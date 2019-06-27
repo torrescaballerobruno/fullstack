@@ -1,0 +1,18 @@
+<h1>Aqui vamos a ocupar eventos e interpolacion</h1>
+<div class="container">
+    <p>Nombre:{{nombre}}</p>
+    <p>Edad:{{edad}}</p>
+    <p>Email:{{email}}</p>
+    <p>Sueldo 1:{{sueldos[0]}}</p>
+    <p>Sueldo 2:{{sueldos[1]}}</p>
+    <p>Sueldo 3:{{sueldos[2]}}</p>
+    <p>Su sueldo final es:{{pago()}}</p>
+    <p>{{esActivo()}}</p>
+</div>
+<app-hijo [titlehijo]="titlepadre"></app-hijo>
+<!--Databinding en dos direcciones-->
+<div class="container">
+    <p>Empresa:<input type="text" [(ngModel)]="empresa"></p>
+    <p>Dependencia:<input type="text" [(ngModel)]="dependencia"></p>
+    <p>Empresa:{{empresa}},Dependencia:{{dependencia}}</p>
+</div>

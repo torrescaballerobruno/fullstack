@@ -1,0 +1,43 @@
+<div class="contenedor">
+  <h1>Administracion de compras</h1>
+  <table *ngIf="hayRegistros();else sinArticulos">
+    <tr>
+      <th>Codigo</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th>Borrar</th>
+      <th>Seleccionar</th>
+    </tr>
+    <tr *ngFor ="let art of articulos">
+      <td>{{art.codigo}}</td>
+      <td>{{art.descripcion}}</td>
+      <td>{{art.precio}}</td>
+      <td>
+        <button (click)="borrar(art)">Borrar</button>
+      </td>
+      <td>
+        <button (click)="seleccionar(art)">Seleccionar</button>
+      </td>
+    </tr>
+  </table>
+  <ng-template #sinArticulos>
+    <p>No hay articulos disponibles</p>
+  </ng-template>
+  <!--Formulario-->
+  <form>
+    <p>Codigo:
+      <input type="number" [(ngModel)]="art.codigo" name="codigo" />
+      <!--[(ngModelOptions)]="{standalone:true}"-->
+    </p>
+    <p>Descripcion:
+      <input type="text" [(ngModel)]="art.descripcion" name="descripcion"/>
+    </p>
+    <p>Precio:.
+      <input type="number" [(ngModel)]="art.precio" name="precio" />
+    </p> [(ngModel)]="art.codigo"
+    <button (click)="agregar()">Agregar</button>
+    <p>{{art.codigo}}</p>
+    <p>{{art.descripcion}}</p>
+    <p>{{art.precio}}</p>
+  </form>
+</div>
