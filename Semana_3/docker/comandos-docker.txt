@@ -1,0 +1,26 @@
+//correr una imagen
+sudo docker run hello-world
+
+//corre la imagen de nginx
+sudo docker run -p 8080:80 -d nginx
+
+//checar que imagenes estan en ejecucion
+sudo docker ps
+
+//checar que imagenes estan de forma local
+sudo docker images
+
+//remover una imagen que tengo  con ayuda de images
+sudo docker rmi IDImagen
+
+//detener una contenedor con ayuda de ps
+sudo docker stop IDContenedor
+
+//Dockerfile
+#Comentario dentro del Dockerfile
+FROM ubuntu		//imagen base
+MAINTAINER bruno.tor.96@gmail.com //el que lo creo
+
+RUN apt-get update				//comandos que se ejecutaran al crear la imagen
+RUN apt-get install -y cowsay
+CMD ["echo","Imagen creada"]	//comando que se ejecuta al levantar el contenedor

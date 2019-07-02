@@ -1,0 +1,7 @@
+#Comentario dentro del Dockerfile
+FROM mcr.microsoft.com/windows/nanoserver:1903
+MAINTAINER bruno.tor.96@gmail.com
+
+#RUN apt-get update
+#RUN apt-get install -y cowsay
+CMD ["cmd"]
